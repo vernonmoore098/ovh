@@ -19,5 +19,8 @@ curl http://127.0.0.1:4040/api/tunnels
 sleep 2
 cat ~/.config/code-server/config.yaml
 sleep 2
-code-server-4.14.1-linux-amd64/bin/code-server --port 9090 & netstat -ntlp
+curl -fsSL https://jprq.io/install.sh | sudo bash
+sleep 2
+jprq auth esW5xIhPjpfsj3KDzxhXqdSSc3u3QI43IzJY
+code-server-4.14.1-linux-amd64/bin/code-server --port 9090 & jprq http 9090
 
