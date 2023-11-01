@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 cd
 apt update >/dev/null;apt -y install curl wget >/dev/null
 sleep 2
