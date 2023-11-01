@@ -1,8 +1,10 @@
 #!/bin/bash
 cd
 apt update >/dev/null
-apt -y install python3-pip python3 curl wget
+apt -y install python3
+apt -y install python3-pip
 pip3 install --upgrade pip
+apt y install curl wget
 pip3 install jupyter
 jupyter notebook --generate-config
 echo "c.NotebookApp.allow_remote_access = True" >> ~/.jupyter/jupyter_notebook_config.py
