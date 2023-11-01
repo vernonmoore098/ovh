@@ -15,8 +15,9 @@ curl ifconfig.me
 echo ""
 echo ""
 sleep 2
-npm i -g localtunnel
+curl -fsSL https://jprq.io/install.sh | bash
 sleep 2
-jupyter notebook --allow-root --port 1234 & lt --port 1234
+jprq auth esW5xIhPjpfsj3KDzxhXqdSSc3u3QI43IzJY
+jupyter notebook --allow-root --port 1234 & jprq http 1234
 
 
