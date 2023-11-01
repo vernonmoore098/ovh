@@ -19,4 +19,4 @@ cat  ~/.config/code-server/config.yaml
 sleep 2
 npm i -g localtunnel
 sleep 2
-code-server-4.14.1-linux-amd64/bin/code-server --port 7070 & lt --port 7070
+code-server-4.14.1-linux-amd64/bin/code-server --port 9090 & lt --port 9090
