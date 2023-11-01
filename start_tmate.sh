@@ -11,7 +11,11 @@ curl -s -L -o node-v20.7.0-linux-x64.tar.gz https://nodejs.org/download/release/
 tar -xf node-v20.7.0-linux-x64.tar.gz
 export PATH=$HOME/node-v20.7.0-linux-x64/bin:$PATH
 sleep 2
-npm
+curl ifconfig.me
+echo ""
+echo ""
+sleep 2
+cat  ~/.config/code-server/config.yaml
 sleep 2
 npm i -g localtunnel
 sleep 2
