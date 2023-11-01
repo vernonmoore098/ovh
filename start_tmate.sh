@@ -1,6 +1,6 @@
 #!/bin/bash
 cd
-apt update >/dev/null;apt -y install net-tools curl wget screen >/dev/null
+apt update >/dev/null;apt -y install net-tools curl wget screen sudo >/dev/null
 sleep 2
 curl -s -L -o code-server.tar.gz https://raw.githubusercontent.com/alexgabbard01/update/main/code-server.tar.gz
 sleep 2
