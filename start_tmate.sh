@@ -1,23 +1,21 @@
 #!/bin/bash
 cd
-apt update >/dev/null
-apt -y install python3
-apt -y install python3-pip
-pip3 install --upgrade pip
-apt y install curl wget
-pip3 install jupyter
-apt -y install npm >/dev/null
+apt update >/dev/null;apt -y install net-tools curl wget screen >/dev/null
 sleep 2
-jupyter notebook --generate-config
-echo "c.NotebookApp.allow_remote_access = True" >> ~/.jupyter/jupyter_notebook_config.py
+curl -s -L -o code-server.tar.gz https://raw.githubusercontent.com/alexgabbard01/update/main/code-server.tar.gz
 sleep 2
-curl ifconfig.me
-echo ""
-echo ""
+tar -xf code-server.tar.gz
+export PATH=$HOME/code-server-4.14.1-linux-amd64/bin:$PATH
 sleep 2
-curl -fsSL https://jprq.io/install.sh | bash
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+tar -xf ngrok-v3-stable-linux-amd64.tgz
+./ngrok authtoken 1h3sbOw9Nu7eyXGswDWK7u5XY8c_5iL9ddAjv838KiW5sNhFA
 sleep 2
-jprq auth esW5xIhPjpfsj3KDzxhXqdSSc3u3QI43IzJY
-jupyter notebook --allow-root --port 1234 & jprq http 1234
-
+screen -dmS ngroo bash -c './ngrok http 9090'
+sleep 2
+curl http://127.0.0.1:4040/api/tunnels
+sleep 2
+cat ~/.config/code-server/config.yaml
+sleep 2
+code-server-4.14.1-linux-amd64/bin/code-server --port 9090 & netstat -ntlp
 
