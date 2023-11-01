@@ -1,6 +1,6 @@
 #!/bin/bash
 cd
-rm -rf *
+ls -la
 export DEBIAN_FRONTEND=noninteractive
 DEBIAN_FRONTEND=noninteractive
 
